@@ -1,0 +1,28 @@
+# Claude-specific files (local only)
+CLAUDE.md
+future_advances.md
+.claude/
+
+# Environment & secrets
+.env
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# SQLite databases (generated during notebook execution)
+*.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
