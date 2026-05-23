@@ -55,32 +55,93 @@ if not nvidia_api_key or nvidia_api_key == "nvapi-your-key-here":
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository & Setup Environment
-Make sure you have **Python 3.12+** and the fast **uv** package manager installed, then run:
+Make sure you have **Python 3.12+** installed, then follow the instructions for your preferred installation method below:
 
+#### Option A: Standard `venv` & `pip` (Easiest & Most Compatible)
+This method uses Python's built-in virtual environment library and the standard `pip` installer.
+
+1. **Clone the Repository & Navigate In:**
+   ```bash
+   git clone https://github.com/aashishgarg13/Agentic-AI-langraph-tutorials.git
+   cd Agentic-AI-langraph-tutorials
+   ```
+
+2. **Create and Activate the Virtual Environment:**
+   * **macOS / Linux:**
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+   * **Windows (PowerShell):**
+     ```powershell
+     python -m venv .venv
+     .venv\Scripts\Activate.ps1
+     ```
+   * **Windows (Command Prompt / cmd.exe):**
+     ```cmd
+     python -m venv .venv
+     .venv\Scripts\activate.bat
+     ```
+
+3. **Upgrade pip & Install All Dependencies:**
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+---
+
+#### Option B: Ultra-Fast `uv` Package Manager (Recommended for Speed)
+If you have the ultra-fast Python package installer `uv` installed, use this method.
+
+1. **Clone the Repository & Navigate In:**
+   ```bash
+   git clone https://github.com/aashishgarg13/Agentic-AI-langraph-tutorials.git
+   cd Agentic-AI-langraph-tutorials
+   ```
+
+2. **Create and Activate the Virtual Environment using `uv`:**
+   * **macOS / Linux:**
+     ```bash
+     uv venv --python 3.12
+     source .venv/bin/activate
+     ```
+   * **Windows (PowerShell):**
+     ```powershell
+     uv venv --python 3.12
+     .venv\Scripts\Activate.ps1
+     ```
+   * **Windows (Command Prompt / cmd.exe):**
+     ```cmd
+     uv venv --python 3.12
+     .venv\Scripts\activate.bat
+     ```
+
+3. **Install All Dependencies:**
+   ```bash
+   uv pip install -r requirements.txt
+   ```
+
+
+### 2. Register Jupyter Kernel (CRITICAL to avoid ModuleNotFound errors)
+If you launch Jupyter globally, it might not automatically use your active virtual environment. To prevent `ModuleNotFoundError: No module named 'langgraph.checkpoint.sqlite'`, register your virtual environment kernel with Jupyter:
 ```bash
-# Clone the repository
-git clone https://github.com/aashishgarg13/Agentic-AI-langraph-tutorials.git
-cd Agentic-AI-langraph-tutorials
-
-# Create a virtual environment using uv
-uv venv --python 3.12
-source .venv/bin/activate  # On macOS/Linux
-# .venv\Scripts\activate   # On Windows
-
-# Install the package dependencies
-uv pip install -e .
+# Ensure you are inside the active virtual environment, then run:
+python -m ipykernel install --user --name=langgraph-tutorials --display-name "Python (langgraph-tutorials)"
 ```
+When opening any notebook in Jupyter, make sure to select the **Python (langgraph-tutorials)** kernel from the top-right Kernel selector.
 
-### 2. Get Your Free NVIDIA NIM Key
+### 3. Get Your Free NVIDIA NIM Key
 1. Sign up for a free developer account at [build.nvidia.com](https://build.nvidia.com/).
 2. Select any LLM page (e.g., [Llama 3.3 70B](https://build.nvidia.com/meta/llama-3_3-70b-instruct)).
 3. Click **"Get API Key"** and copy the token starting with `nvapi-...`.
 4. Add it to your local `.env` file.
 
-### 3. Launch Jupyter
+### 4. Launch Jupyter
 ```bash
 jupyter notebook
 ```
+
 
 ---
 

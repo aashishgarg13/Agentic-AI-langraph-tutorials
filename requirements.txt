@@ -1,7 +1,21 @@
-# This project now uses pyproject.toml with uv for package management.
-# See README.md for setup instructions.
-#
-# Quick install:
-#   uv venv --python 3.12
-#   source .venv/bin/activate
-#   uv pip install -e .
+# Agentic AI LangGraph Tutorials Dependencies
+# You can install all dependencies directly with:
+#   pip install -r requirements.txt
+# Or if using uv:
+#   uv pip install -r requirements.txt
+
+langgraph>=1.1.9
+langgraph-prebuilt>=1.0.11
+langchain>=1.2.15
+langchain-nvidia-ai-endpoints>=0.3.0
+langgraph-checkpoint-sqlite>=3.0.3
+langgraph-checkpoint-postgres>=3.0.5
+langgraph-supervisor>=0.0.31
+langgraph-swarm>=0.1.0
+langmem>=0.0.30
+langgraph-cli>=0.4.24
+langgraph-sdk>=0.3.13
+python-dotenv>=1.0.0
+jupyter>=1.0.0
+ipykernel>=6.25.0
+playwright>=1.59.0

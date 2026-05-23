@@ -13,6 +13,8 @@ env/
 
 # SQLite databases (generated during notebook execution)
 *.db
+*.db-shm
+*.db-wal
 
 # Python cache
 __pycache__/
